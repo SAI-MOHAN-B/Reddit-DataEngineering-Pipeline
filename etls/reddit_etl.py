@@ -20,3 +20,7 @@ def extract_posts(reddit_instance: Reddit, subreddit: str, time_filter: str, lim
     posts = subreddit.top(time_filter=time_filter, limit=limit)
     posts_list = []
     print(posts)
+    for post in posts:
+        post_dict = vars(post)
+        print(post_dict)
+        # post = {key:posts_list[key] for key in POST_FIELD}

@@ -1,6 +1,7 @@
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.python import PythonOperator
+from airflow import DAG
 import os
 import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -28,7 +29,8 @@ extract = PythonOperator(
         'subreddit': 'dataengineering',
         'time_filter': ' day',
         'limit': 100
-    }
+    },
+    dag=dag
 )
 
 # upload to s3
