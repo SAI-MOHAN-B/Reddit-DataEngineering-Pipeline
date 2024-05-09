@@ -20,7 +20,7 @@ The pipeline is designed to:
 4. Load the transformed data into Amazon Redshift for analytics and querying.
 
 ## Architecture
-![RedditDataEngineering.png](assets%2FRedditDataEngineering.png)
+![RedditDataEngineering.png](RedditDataEngineering.png)
 1. **Reddit API**: Source of the data.
 2. **Apache Airflow & Celery**: Orchestrates the ETL process and manages task distribution.
 3. **PostgreSQL**: Temporary storage and metadata management.
